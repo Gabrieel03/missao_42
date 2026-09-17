@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <title>Missão Web</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 40px; 
+            font-size: 15px;
+        }
+
+
+        .linha {
+            margin: 0 40px; 
+            border: 0;
+            border-top: 1px solid #ccc;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: center; 
+            height: calc(100vh - 60px);
+            padding: 20px;
+            gap: 30px; 
+        }
+        .titulo {
+            font-size: 24px;
+        }
+
+
+        .galeria {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .img-missao {
+            width: 100%;
+            max-width: 400px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <p>Missão 42</p>
+        <p>Cell 1-2</p>
+    </header>
+    
+    <hr class="linha">
+
+    <section class="container">
+
+        <h4 class="titulo">
+            Missão Web
+        </h4>
+
+        <div class="galeria">
+
+            <a href="https://www.youtube.com/watch?v=INscMGmhmX4">
+                <img class="img-missao" src="https://imgs.search.brave.com/28qTl4d2qcI60SqdnGz1k_p3ZdfxeIpFmUV41QENh1A/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3RpL2ZvdG9z/LWdyYXRpcy90Mi82/MTc4MDU0LWRlbGlj/aW9zby1mcmVzY28t/c3VjdWxlbnRvLWhh/bWJ1cmd1ZXItY29t/LWNhcm5lLWNvc3Rl/bGV0ZS1xdWVpam8t/dG9tYXRlcy1lLWNl/Ym9sYXMtZ3JhdGlz/LWZvdG8uSlBH" alt="Hambúrguer artesanal">
+            </a>
+            
+            <a href="https://www.youtube.com/watch?v=INscMGmhmX4">
+                <img class="img-missao" src="https://imgs.search.brave.com/T-H9Rv4789aurWWMFfz_7Zt_89hqbxAf-HQAWJiOCQg/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTMw/NjUwNTIwMS9waG90/by9sZXR0dWNlLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz1t/WkJjOHFYVmlTNWdp/WXYwUHV5aXc4SnNL/YVZaTU5QZmtGbTFV/Uk5SMjB3PQ" alt="Alface verde">
+            </a>    
+            
+        </div>
+
+        <p>
+            Figura IV.1: Ex02
+        </p>
+    </section>
+
+</body>
+</html>

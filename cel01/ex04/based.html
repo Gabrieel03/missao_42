@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Basics</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: pink;
+            padding: 20px;
+            font-family: sans-serif;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 40px;
+        }
+
+        .container-lojas {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card img {
+            width: 250px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            border: 1px solid black;
+            margin-bottom: 20px;
+        }
+
+        .rodape {
+            text-align: right;
+            font-style: italic;        flex: content;
+            flex-direction: column;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lojas Tech & Ofertas</h1>
+
+    <div class="container-lojas">
+        <div class="card">
+            <img src="https://imgs.search.brave.com/qVpHB5gxCRPOB7xIOyLla968qAvrd3dGduYMrr3WfnY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/cG5nYWxsLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMy9BbGll/bndhcmUtTGFwdG9w/LXRodW1iLndlYnA" alt="Compra online 1">
+            <a href="https://www.amazon.com.br">Amazon</a> 
+        </div>
+        
+        <div class="card">
+            <img src="https://ibyteb2b.vteximg.com.br/arquivos/ids/293976-1000-1000/monitor-office-slim-get-21-5-led-va-full-hd-5ms-branco-01-min.jpg?v=638990043320330000" alt="Compra online 2">
+            <a href="https://www.kabum.com.br">Kabum</a>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="rodape">
+        &copy; gabandra 2026
+    </div>
+
+</body>
+</html>
