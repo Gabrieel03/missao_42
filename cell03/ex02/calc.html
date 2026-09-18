@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body,html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f2f2f2;
+        }
+
+        form {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: white;
+            padding: 24px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        input[type="text"] {
+            width: 90px;
+            padding: 8px;
+            font-size: 1rem;
+        }
+
+        select {
+            padding: 8px;
+            font-size: 1rem;
+        }
+
+        input[type="submit"] {
+            padding: 8px 16px;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            background-color: #2d6cdf;
+            color: white;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1f4fae;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <form id="calc-form">
+        <input type="text" id="left" name="left" placeholder="0" inputmode="numeric">
+        <select id="operator" name="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input type="text" id="right" name="right" placeholder="0" inputmode="numeric">
+        <input type="submit" value="Try me!">
+    </form>
+
+    <script>
+        
+        const form = document.getElementById('calc-form');
+        const leftInput = document.getElementById('left');
+        const rightInput = document.getElementById('right');
+        const operatorSelect = document.getElementById('operator');
+
+        function isPositiveInteger(value) {
+            return /^[0-9]+$/.test(value);
+        }
+
+        function calculate(left, operator, right) {
+            switch (operator) {
+                case '+':
+                    return left + right;
+                case '-':
+                    return left - right;
+                case '*':
+                    return left * right;
+                case '/':
+                    return left / right;
+                case '%':
+                    return left % right;
+            }
+        }
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const leftValue = leftInput.value.trim();
+            const rightValue = rightInput.value.trim();
+            const operator = operatorSelect.value;
+
+            if (!isPositiveInteger(leftValue) || !isPositiveInteger(rightValue)) {
+                alert('Error :(');
+                return;
+            }
+
+            const left = parseInt(leftValue, 10);
+            const right = parseInt(rightValue, 10);
+
+            if ((operator === '/' || operator === '%') && right === 0) {
+                alert("It's over 9000!");
+                console.log("It's over 9000!");
+                return;
+            }
+
+            const result = calculate(left, operator, right);
+
+            alert(result);
+            console.log(result);
+        });
+
+        setInterval(() => {
+            alert('Please, use me...');
+        }, 30000);
+    </script>
+
+</body>
+
+</html>
